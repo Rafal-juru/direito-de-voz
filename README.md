@@ -1,4 +1,4 @@
-# Direito de Voz
+﻿# Direito de Voz
 
 Site informativo e de encaminhamento para **trabalhadores demitidos ou pressionados por motivação política no Brasil**.
 
@@ -36,4 +36,5 @@ Muita gente demitida nessas situações não sabe o que fazer, onde denunciar ne
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/SEU-USUARIO/direito-de-voz.git
+   git clone https://github.com/Rafal-juru/direito-de-voz.git
+

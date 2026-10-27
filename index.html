@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito de Voz — Demissão por motivação política é discriminação</title>
+  <meta name="description" content="Informação e orientação para trabalhadores demitidos ou pressionados por motivação política no Brasil. Saiba como guardar provas, onde denunciar e como buscar apoio jurídico.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f3b57">
+  <meta property="og:title" content="Direito de Voz — Trabalho sem medo">
+  <meta property="og:description" content="Demitir alguém por posição política é discriminação. Conheça seus direitos e os canais oficiais de denúncia.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       1. TOKENS DE DESIGN (edite cores e espaçamentos aqui)
+       ========================================================= */
+    :root {
+      --azul-900: #0b2c42;
+      --azul-800: #0f3b57;
+      --azul-700: #15506f;
+      --azul-600: #1d6a8f;
+      --azul-100: #e3f0f7;
+      --azul-50:  #f2f8fb;
+      --verde-700: #1f6b55;
+      --verde-600: #26806a;
+      --verde-500: #2f9a7f;
+      --verde-100: #dff2ec;
+      --cinza-900: #1d2731;
+      --cinza-700: #3d4a56;
+      --cinza-600: #55626e;
+      --cinza-300: #c9d3db;
+      --cinza-200: #e2e8ed;
+      --cinza-100: #f1f4f7;
+      --branco: #ffffff;
+      --alerta-700: #8a2d1c;
+      --alerta-100: #fdecea;
+      --aviso-100: #fff6e0;
+      --aviso-700: #7a5300;
+
+      --fonte-texto: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --fonte-titulo: "Outfit", "Inter", system-ui, sans-serif;
+
+      --raio-sm: 8px;
+      --raio-md: 14px;
+      --raio-lg: 22px;
+      --sombra-sm: 0 1px 2px rgba(11, 44, 66, .06), 0 2px 8px rgba(11, 44, 66, .05);
+      --sombra-md: 0 6px 24px rgba(11, 44, 66, .09);
+      --sombra-lg: 0 18px 48px rgba(11, 44, 66, .14);
+      --altura-header: 68px;
+      --largura-max: 1120px;
+      --transicao: 220ms cubic-bezier(.2, .7, .2, 1);
+    }
+
+    /* =========================================================
+       2. RESET E BASE
+       ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-padding-top: calc(var(--altura-header) + 12px); -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--fonte-texto);
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--cinza-900);
+      background: var(--azul-50);
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    h1, h2, h3, h4 { font-family: var(--fonte-titulo); line-height: 1.2; margin: 0 0 .6em; color: var(--azul-900); }
+    p { margin: 0 0 1em; }
+    a { color: var(--azul-700); text-underline-offset: 3px; }
+    a:hover { color: var(--verde-700); }
+
+    /* Foco visível e consistente para navegação por teclado */
+    :focus-visible {
+      outline: 3px solid #f2b705;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .sr-only {
+      position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+
+    /* Link "pular para o conteúdo" */
+    .skip-link {
+      position: absolute; left: 12px; top: -60px; z-index: 1000;
+      background: var(--azul-900); color: var(--branco);
+      padding: 10px 16px; border-radius: var(--raio-sm); font-weight: 600; text-decoration: none;
+      transition: top var(--transicao);
+    }
+    .skip-link:focus { top: 12px; color: var(--branco); }
+
+    .container { width: 100%; max-width: var(--largura-max); margin: 0 auto; padding: 0 20px; }
+
+    section { padding: 64px 0; }
+    .secao-cabecalho { max-width: 720px; margin-bottom: 36px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--verde-700); background: var(--verde-100);
+      padding: 6px 12px; border-radius: 999px; margin-bottom: 14px;
+    }
+    .secao-titulo { font-size: clamp(1.7rem, 4.5vw, 2.4rem); }
+    .secao-sub { color: var(--cinza-700); font-size: 1.05rem; }
+
+    /* =========================================================
+       3. CABEÇALHO FIXO
+       ========================================================= */
+    .header {
+      position: fixed; inset: 0 0 auto 0; z-index: 100;
+      height: var(--altura-header);
+      background: rgba(255, 255, 255, .88);
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      border-bottom: 1px solid transparent;
+      transition: box-shadow var(--transicao), border-color var(--transicao);
+    }
+    .header.rolado { box-shadow: var(--sombra-sm); border-bottom-color: var(--cinza-200); }
+    .header .container { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+
+    .logo {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--fonte-titulo); font-weight: 800; font-size: 1.2rem;
+      color: var(--azul-900); text-decoration: none;
+    }
+    .logo-icone {
+      width: 36px; height: 36px; border-radius: 10px;
+      display: grid; place-items: center;
+      background: linear-gradient(135deg, var(--azul-700), var(--verde-600));
+      color: var(--branco); box-shadow: var(--sombra-sm);
+    }
+    .logo span small { display: block; font-family: var(--fonte-texto); font-weight: 500; font-size: .7rem; color: var(--cinza-600); letter-spacing: .02em; }
+
+    .menu-botao {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px; border-radius: var(--raio-sm);
+      border: 1px solid var(--cinza-300); background: var(--branco); color: var(--azul-900);
+      cursor: pointer;
+    }
+    .menu-botao .barra { display: block; width: 20px; height: 2px; background: currentColor; position: relative; transition: background var(--transicao); }
+    .menu-botao .barra::before, .menu-botao .barra::after {
+      content: ""; position: absolute; left: 0; width: 20px; height: 2px; background: currentColor;
+      transition: transform var(--transicao), top var(--transicao);
+    }
+    .menu-botao .barra::before { top: -6px; }
+    .menu-botao .barra::after { top: 6px; }
+    .menu-botao[aria-expanded="true"] .barra { background: transparent; }
+    .menu-botao[aria-expanded="true"] .barra::before { top: 0; transform: rotate(45deg); }
+    .menu-botao[aria-expanded="true"] .barra::after { top: 0; transform: rotate(-45deg); }
+
+    .nav {
+      position: absolute; top: var(--altura-header); left: 0; right: 0;
+      background: var(--branco); border-bottom: 1px solid var(--cinza-200); box-shadow: var(--sombra-md);
+      padding: 8px 20px 20px;
+      display: none;
+    }
+    .nav.aberto { display: block; animation: desce 200ms ease-out; }
+    .nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+    .nav a {
+      display: block; padding: 12px 14px; border-radius: var(--raio-sm);
+      color: var(--cinza-900); font-weight: 600; text-decoration: none;
+      transition: background var(--transicao), color var(--transicao);
+    }
+    .nav a:hover, .nav a.ativo { background: var(--azul-100); color: var(--azul-800); }
+    .nav a.cta { background: var(--verde-700); color: var(--branco); text-align: center; margin-top: 6px; }
+    .nav a.cta:hover { background: var(--verde-600); color: var(--branco); }
+
+    @keyframes desce { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+    /* =========================================================
+       4. HERO — ENTENDA SEUS DIREITOS
+       ========================================================= */
+    .hero {
+      position: relative; overflow: hidden;
+      padding: calc(var(--altura-header) + 48px) 0 72px;
+      background:
+        radial-gradient(900px 420px at 85% -10%, rgba(47, 154, 127, .22), transparent 60%),
+        radial-gradient(700px 380px at -10% 110%, rgba(29, 106, 143, .25), transparent 60%),
+        linear-gradient(160deg, var(--azul-900) 0%, var(--azul-800) 55%, #13506a 100%);
+      color: var(--branco);
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px);
+      background-size: 22px 22px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent 85%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent 85%);
+    }
+    .hero .container { position: relative; z-index: 1; display: grid; gap: 40px; }
+    .hero .eyebrow { background: rgba(255,255,255,.12); color: #bfeadc; }
+    .hero h1 {
+      color: var(--branco);
+      font-size: clamp(2.1rem, 7vw, 3.6rem); font-weight: 800; letter-spacing: -.01em;
+      margin-bottom: 18px;
+    }
+    .hero h1 em { font-style: normal; color: #8fe0c6; }
+    .hero-sub { font-size: clamp(1.05rem, 2.6vw, 1.25rem); color: #d7e6ef; max-width: 620px; }
+    .hero-acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 48px; padding: 12px 22px; border-radius: 999px;
+      font: 600 1rem/1.2 var(--fonte-texto); text-decoration: none; cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform var(--transicao), background var(--transicao), box-shadow var(--transicao), color var(--transicao);
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+    .btn-primario { background: #8fe0c6; color: var(--azul-900); box-shadow: 0 8px 22px rgba(143, 224, 198, .25); }
+    .btn-primario:hover { background: #a9ead5; color: var(--azul-900); }
+    .btn-secundario { background: transparent; color: var(--branco); border-color: rgba(255,255,255,.45); }
+    .btn-secundario:hover { background: rgba(255,255,255,.1); color: var(--branco); }
+    .btn-verde { background: var(--verde-700); color: var(--branco); box-shadow: var(--sombra-sm); }
+    .btn-verde:hover { background: var(--verde-600); color: var(--branco); box-shadow: var(--sombra-md); }
+
+    .hero-card {
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16);
+      border-radius: var(--raio-lg); padding: 24px;
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    }
+    .hero-card h2 { color: var(--branco); font-size: 1.15rem; display: flex; align-items: center; gap: 10px; }
+    .hero-card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+    .hero-card li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; color: #dce9f1; font-size: .97rem; }
+    .hero-card li strong { color: var(--branco); }
+    .check {
+      width: 28px; height: 28px; border-radius: 50%;
+      display: grid; place-items: center; background: rgba(143, 224, 198, .18); color: #8fe0c6;
+    }
+
+    .faixa-emergencia {
+      background: var(--alerta-100); color: var(--alerta-700);
+      border-bottom: 1px solid #f3c9c2;
+    }
+    .faixa-emergencia .container {
+      display: flex; align-items: center; gap: 12px; padding-top: 14px; padding-bottom: 14px;
+      font-weight: 600; font-size: .97rem;
+    }
+    .faixa-emergencia a { color: var(--alerta-700); font-weight: 800; }
+
+    /* =========================================================
+       5. BASE JURÍDICA
+       ========================================================= */
+    .direitos { background: var(--branco); }
+    .grid-direitos { display: grid; gap: 18px; }
+    .card-direito {
+      background: var(--azul-50); border: 1px solid var(--cinza-200);
+      border-radius: var(--raio-md); padding: 24px;
+      transition: transform var(--transicao), box-shadow var(--transicao), border-color var(--transicao);
+    }
+    .card-direito:hover { transform: translateY(-3px); box-shadow: var(--sombra-md); border-color: var(--azul-100); }
+    .card-direito .icone {
+      width: 46px; height: 46px; border-radius: 12px; margin-bottom: 14px;
+      display: grid; place-items: center; background: var(--azul-100); color: var(--azul-700);
+    }
+    .card-direito h3 { font-size: 1.15rem; }
+    .card-direito p { color: var(--cinza-700); margin: 0; font-size: .97rem; }
+
+    .nota {
+      margin-top: 28px; padding: 16px 20px; border-radius: var(--raio-md);
+      background: var(--aviso-100); color: var(--aviso-700); border-left: 4px solid #e0a800;
+      font-size: .95rem;
+    }
+    .nota strong { color: #5c3e00; }
+
+    /* =========================================================
+       6. PASSO A PASSO
+       ========================================================= */
+    .passos { background: linear-gradient(180deg, var(--azul-50), var(--cinza-100)); }
+    .lista-passos { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; counter-reset: passo; }
+    .passo {
+      position: relative; counter-increment: passo;
+      background: var(--branco); border: 1px solid var(--cinza-200);
+      border-radius: var(--raio-md); padding: 24px 22px 22px 22px;
+      box-shadow: var(--sombra-sm);
+      transition: transform var(--transicao), box-shadow var(--transicao);
+    }
+    .passo:hover { transform: translateY(-3px); box-shadow: var(--sombra-md); }
+    .passo-topo { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+    .passo-num {
+      flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px;
+      display: grid; place-items: center;
+      font: 800 1.15rem var(--fonte-titulo); color: var(--branco);
+      background: linear-gradient(135deg, var(--azul-700), var(--verde-600));
+    }
+    .passo-num::before { content: counter(passo); }
+    .passo h3 { font-size: 1.15rem; margin: 0; }
+    .passo p, .passo li { color: var(--cinza-700); font-size: .97rem; }
+    .passo ul { margin: 0 0 .6em; padding-left: 1.2em; }
+    .passo li { margin-bottom: 4px; }
+    .passo p:last-child, .passo ul:last-child { margin-bottom: 0; }
+
+    .passo.urgente { border-color: #f0c3bb; background: linear-gradient(180deg, #fff, var(--alerta-100)); }
+    .passo.urgente .passo-num { background: var(--alerta-700); }
+
+    .tag {
+      display: inline-block; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+      padding: 3px 9px; border-radius: 999px; margin-left: auto;
+      background: var(--verde-100); color: var(--verde-700); white-space: nowrap;
+    }
+    .tag.vermelha { background: #fbd9d3; color: var(--alerta-700); }
+    .tag.azul { background: var(--azul-100); color: var(--azul-700); }
+
+    /* Modelo de relato (expansível) */
+    .modelo { margin-top: 12px; border: 1px dashed var(--cinza-300); border-radius: var(--raio-sm); background: var(--cinza-100); }
+    .modelo summary {
+      cursor: pointer; padding: 12px 14px; font-weight: 600; color: var(--azul-800);
+      list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    }
+    .modelo summary::-webkit-details-marker { display: none; }
+    .modelo summary::after { content: "+"; font-size: 1.3rem; line-height: 1; transition: transform var(--transicao); }
+    .modelo[open] summary::after { transform: rotate(45deg); }
+    .modelo-conteudo { padding: 0 14px 14px; }
+    .modelo pre {
+      white-space: pre-wrap; word-wrap: break-word; margin: 0 0 10px;
+      font: .88rem/1.6 var(--fonte-texto); color: var(--cinza-900);
+      background: var(--branco); border: 1px solid var(--cinza-200); border-radius: var(--raio-sm); padding: 14px;
+    }
+    .btn-copiar {
+      font: 600 .9rem var(--fonte-texto); padding: 8px 14px; border-radius: 999px; cursor: pointer;
+      border: 1px solid var(--azul-600); background: var(--branco); color: var(--azul-700);
+      transition: background var(--transicao), color var(--transicao);
+    }
+    .btn-copiar:hover { background: var(--azul-700); color: var(--branco); }
+
+    /* =========================================================
+       7. CANAIS OFICIAIS
+       ========================================================= */
+    .canais { background: var(--branco); }
+    .grid-canais { display: grid; gap: 18px; }
+    .canal {
+      display: flex; flex-direction: column;
+      border: 1px solid var(--cinza-200); border-radius: var(--raio-md); padding: 24px;
+      background: var(--branco);
+      transition: border-color var(--transicao), box-shadow var(--transicao), transform var(--transicao);
+    }
+    .canal:hover { border-color: var(--verde-500); box-shadow: var(--sombra-md); transform: translateY(-3px); }
+    .canal-sigla {
+      align-self: flex-start;
+      font: 800 .85rem var(--fonte-titulo); letter-spacing: .05em;
+      color: var(--azul-800); background: var(--azul-100); padding: 6px 12px; border-radius: 8px; margin-bottom: 14px;
+    }
+    .canal h3 { font-size: 1.1rem; }
+    .canal p { color: var(--cinza-700); font-size: .95rem; flex-grow: 1; }
+    .canal-info { font-size: .9rem; color: var(--cinza-600); margin-bottom: 14px; }
+    .canal-link {
+      display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+      font-weight: 700; color: var(--verde-700); text-decoration: none;
+      padding: 8px 0; border-bottom: 2px solid var(--verde-100);
+      transition: gap var(--transicao), border-color var(--transicao);
+    }
+    .canal-link:hover { gap: 12px; border-color: var(--verde-600); color: var(--verde-700); }
+
+    /* =========================================================
+       8. FORMULÁRIO — FALE COM UM ADVOGADO
+       ========================================================= */
+    .contato {
+      background:
+        radial-gradient(700px 360px at 100% 0%, rgba(47, 154, 127, .12), transparent 60%),
+        var(--cinza-100);
+    }
+    .contato-grid { display: grid; gap: 32px; align-items: start; }
+    .contato-lado ul { padding-left: 1.2em; color: var(--cinza-700); }
+    .contato-lado li { margin-bottom: 8px; }
+
+    .form-card {
+      background: var(--branco); border-radius: var(--raio-lg); padding: 28px 22px;
+      box-shadow: var(--sombra-lg); border: 1px solid var(--cinza-200);
+    }
+    .campo { margin-bottom: 18px; }
+    .campo label { display: block; font-weight: 600; margin-bottom: 6px; color: var(--cinza-900); }
+    .campo .obrig { color: var(--alerta-700); }
+    .campo .dica { display: block; font-size: .85rem; color: var(--cinza-600); margin-top: 4px; }
+    .campo input, .campo select, .campo textarea {
+      width: 100%; min-height: 48px; padding: 12px 14px;
+      font: 1rem var(--fonte-texto); color: var(--cinza-900);
+      background: var(--branco); border: 1.5px solid var(--cinza-300); border-radius: var(--raio-sm);
+      transition: border-color var(--transicao), box-shadow var(--transicao);
+    }
+    .campo textarea { min-height: 140px; resize: vertical; }
+    .campo input:hover, .campo select:hover, .campo textarea:hover { border-color: var(--cinza-600); }
+    .campo input:focus, .campo select:focus, .campo textarea:focus {
+      outline: none; border-color: var(--azul-600); box-shadow: 0 0 0 4px rgba(29, 106, 143, .18);
+    }
+    .campo.erro input, .campo.erro select, .campo.erro textarea { border-color: var(--alerta-700); background: #fffafa; }
+    .msg-erro { display: none; color: var(--alerta-700); font-size: .88rem; font-weight: 600; margin-top: 6px; }
+    .campo.erro .msg-erro { display: block; }
+    .contador { text-align: right; font-size: .8rem; color: var(--cinza-600); margin-top: 4px; }
+
+    .campo-check { display: flex; gap: 10px; align-items: flex-start; }
+    .campo-check input { width: 22px; height: 22px; min-height: auto; margin-top: 2px; flex: 0 0 auto; accent-color: var(--verde-700); }
+    .campo-check label { font-weight: 500; font-size: .93rem; color: var(--cinza-700); margin: 0; }
+
+    .form-status {
+      display: none; padding: 14px 16px; border-radius: var(--raio-sm); margin-bottom: 18px; font-weight: 600;
+    }
+    .form-status.sucesso { display: block; background: var(--verde-100); color: var(--verde-700); border: 1px solid #b6e0d2; }
+    .form-status.falha { display: block; background: var(--alerta-100); color: var(--alerta-700); border: 1px solid #f3c9c2; }
+    .form-card .btn-verde { width: 100%; font-size: 1.05rem; }
+    .form-privacidade { font-size: .82rem; color: var(--cinza-600); margin: 14px 0 0; text-align: center; }
+
+    /* =========================================================
+       9. RODAPÉ
+       ========================================================= */
+    .footer { background: var(--azul-900); color: #c4d6e2; padding: 48px 0 28px; }
+    .footer .logo { color: var(--branco); }
+    .footer .logo span small { color: #9fb8c8; }
+    .aviso-legal {
+      margin: 22px 0; padding: 18px 20px; border-radius: var(--raio-md);
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+      color: #e4eef5; font-size: .97rem;
+    }
+    .footer nav ul { list-style: none; margin: 0 0 22px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+    .footer a { color: #cfe6f3; }
+    .footer a:hover { color: #8fe0c6; }
+    .footer-base { border-top: 1px solid rgba(255,255,255,.1); padding-top: 18px; font-size: .85rem; color: #9fb8c8; }
+
+    /* Botão voltar ao topo */
+    .topo {
+      position: fixed; right: 18px; bottom: 18px; z-index: 90;
+      width: 48px; height: 48px; border-radius: 50%; border: 0; cursor: pointer;
+      background: var(--azul-800); color: var(--branco); box-shadow: var(--sombra-md);
+      display: grid; place-items: center;
+      opacity: 0; visibility: hidden; transform: translateY(10px);
+      transition: opacity var(--transicao), transform var(--transicao), visibility var(--transicao), background var(--transicao);
+    }
+    .topo.visivel { opacity: 1; visibility: visible; transform: none; }
+    .topo:hover { background: var(--verde-700); }
+
+    /* Animação de entrada ao rolar */
+    .revelar { opacity: 0; transform: translateY(18px); transition: opacity 600ms ease, transform 600ms ease; }
+    .revelar.visivel { opacity: 1; transform: none; }
+
+    /* =========================================================
+       10. RESPONSIVO (mobile-first → telas maiores)
+       ========================================================= */
+    @media (min-width: 640px) {
+      .grid-direitos { grid-template-columns: repeat(2, 1fr); }
+      .grid-canais { grid-template-columns: repeat(2, 1fr); }
+      .lista-passos { grid-template-columns: repeat(2, 1fr); }
+      .passo.largo { grid-column: 1 / -1; }
+      .form-card { padding: 34px; }
+    }
+
+    @media (min-width: 960px) {
+      section { padding: 88px 0; }
+      .menu-botao { display: none; }
+      .nav {
+        position: static; display: block; padding: 0; background: transparent; border: 0; box-shadow: none;
+      }
+      .nav ul { flex-direction: row; align-items: center; gap: 2px; }
+      .nav a { padding: 8px 14px; font-size: .95rem; }
+      .nav a.cta { margin: 0 0 0 8px; padding: 9px 18px; border-radius: 999px; }
+      .hero { padding: calc(var(--altura-header) + 80px) 0 104px; }
+      .hero .container { grid-template-columns: 1.35fr 1fr; align-items: center; gap: 56px; }
+      .grid-direitos { grid-template-columns: repeat(3, 1fr); }
+      .grid-canais { grid-template-columns: repeat(3, 1fr); }
+      .lista-passos { grid-template-columns: repeat(3, 1fr); }
+      .contato-grid { grid-template-columns: 1fr 1.2fr; gap: 56px; }
+      .footer-topo { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; }
+      .aviso-legal { margin-top: 0; }
+    }
+
+    /* Respeita quem prefere menos movimento */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .revelar { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <!-- =====================================================
+       CABEÇALHO FIXO
+       ===================================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#direitos" class="logo" aria-label="Direito de Voz — voltar ao início">
+        <span class="logo-icone" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 7a4 4 0 0 0 6 0z"/><path d="M19 7l-3 7a4 4 0 0 0 6 0z"/><path d="M8 21h8"/></svg>
+        </span>
+        <span>Direito de Voz<small>Trabalho sem medo</small></span>
+      </a>
+
+      <button class="menu-botao" id="menu-botao" type="button" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menu de navegação">
+        <span class="barra" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" id="nav-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#direitos" id="nav-direitos">Direitos</a></li>
+          <li><a href="#passo-a-passo" id="nav-passos">Passo a Passo</a></li>
+          <li><a href="#denuncie" id="nav-denuncie">Denuncie</a></li>
+          <li><a href="#advogado" id="nav-advogado" class="cta">Fale com um Advogado</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- =====================================================
+         HERO — ENTENDA SEUS DIREITOS
+         ===================================================== -->
+    <section class="hero" id="direitos" aria-labelledby="titulo-hero">
+      <div class="container">
+        <div>
+          <span class="eyebrow">Entenda seus direitos</span>
+          <h1 id="titulo-hero">Foi demitido por causa de política? <em>Isso é ilegal.</em></h1>
+          <p class="hero-sub">
+            A dispensa por motivação política é discriminatória e pode ser anulada na Justiça do Trabalho.
+            Aqui você encontra orientação clara sobre como se proteger, guardar provas e onde buscar ajuda.
+          </p>
+          <div class="hero-acoes">
+            <a href="#passo-a-passo" class="btn btn-primario" id="hero-cta-passos">
+              Ver o passo a passo
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+            </a>
+            <a href="#denuncie" class="btn btn-secundario" id="hero-cta-canais">Canais de denúncia</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-labelledby="titulo-saiba">
+          <h2 id="titulo-saiba">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            O que você precisa saber
+          </h2>
+          <ul>
+            <li>
+              <span class="check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+              <span><strong>Sua opinião política é protegida.</strong> Ninguém pode ser punido no trabalho pelo que pensa ou pelo voto que escolhe.</span>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+              <span><strong>Pressão também é irregular.</strong> Coagir alguém a votar, fazer campanha ou se calar pode ser assédio eleitoral.</span>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+              <span><strong>Há caminhos na Justiça.</strong> Em casos de dispensa discriminatória, a lei prevê reintegração e pode haver indenização por dano moral.</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Faixa de emergência -->
+    <div class="faixa-emergencia" role="note">
+      <div class="container">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        <span>Sofreu ameaça física ou está em perigo? Ligue <a href="tel:190">190</a> (Polícia Militar) imediatamente.</span>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         BASE JURÍDICA
+         ===================================================== -->
+    <section class="direitos" aria-labelledby="titulo-base">
+      <div class="container">
+        <div class="secao-cabecalho revelar">
+          <span class="eyebrow">O que diz a lei</span>
+          <h2 class="secao-titulo" id="titulo-base">Demitir por posição política é discriminação</h2>
+          <p class="secao-sub">A legislação brasileira protege a liberdade de pensamento também dentro do ambiente de trabalho. Veja os pontos principais, em linguagem simples.</p>
+        </div>
+
+        <div class="grid-direitos">
+          <article class="card-direito revelar">
+            <div class="icone" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <h3>Constituição Federal</h3>
+            <p>Garante a liberdade de consciência e de expressão e determina que ninguém será privado de direitos por motivo de convicção política (art. 5º).</p>
+          </article>
+
+          <article class="card-direito revelar">
+            <div class="icone" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/></svg>
+            </div>
+            <h3>Lei 9.029/1995</h3>
+            <p>Proíbe práticas discriminatórias para acesso ou manutenção do emprego. Em caso de dispensa discriminatória, prevê a reintegração com ressarcimento ou o pagamento em dobro da remuneração do período de afastamento.</p>
+          </article>
+
+          <article class="card-direito revelar">
+            <div class="icone" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            </div>
+            <h3>Dano moral</h3>
+            <p>Quando a dispensa ou a pressão causa humilhação ou sofrimento, a Justiça do Trabalho pode avaliar o pedido de indenização por dano moral.</p>
+          </article>
+        </div>
+
+        <p class="nota revelar">
+          <strong>Importante:</strong> cada caso é único. As informações deste site ajudam a entender seus direitos e os caminhos possíveis, mas o resultado depende das provas e da análise de um(a) profissional.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PASSO A PASSO
+         ===================================================== -->
+    <section class="passos" id="passo-a-passo" aria-labelledby="titulo-passos">
+      <div class="container">
+        <div class="secao-cabecalho revelar">
+          <span class="eyebrow">Passo a passo</span>
+          <h2 class="secao-titulo" id="titulo-passos">O que fazer agora, em 7 etapas</h2>
+          <p class="secao-sub">Siga na ordem que fizer sentido para o seu caso. As primeiras etapas são as mais urgentes: provas podem desaparecer rapidamente.</p>
+        </div>
+
+        <ol class="lista-passos">
+          <li class="passo urgente revelar">
+            <div class="passo-topo">
+              <span class="passo-num" aria-hidden="true"></span>
+              <h3>Segurança primeiro</h3>
+              <span class="tag vermelha">Urgente</span>
+            </div>
+            <p>Se houver ameaça física contra você ou sua família, ligue <a href="tel:190"><strong>190</strong></a> imediatamente. Sua integridade vem antes de qualquer outra providência.</p>
+          </li>
+
+          <li class="passo revelar">
+            <div class="passo-topo">
+              <span class="passo-num" aria-hidden="true"></span>
+              <h3>Guarde as provas antes que sumam</h3>
+              <span class="tag vermelha">Urgente</span>
+            </div>
+            <ul>
+              <li>Faça prints de mensagens, e-mails e publicações; salve áudios.</li>
+              <li>Anote nomes e contatos de testemunhas.</li>
+              <li><strong>Não edite nem recorte os prints</strong>: mostre data, hora e remetente.</li>
+              <li>Mantenha os originais no celular e uma cópia na nuvem.</li>
+            </ul>
+          </li>
+
+          <li class="passo revelar">
+            <div class="passo-topo">
+              <span class="passo-num" aria-hidden="true"></span>
+              <h3>Ata notarial em cartório</h3>
+              <span class="tag azul">Prova forte</span>
+            </div>
+            <p>O tabelião confere as mensagens diretamente no seu celular e certifica o conteúdo em documento oficial. É a prova mais forte, embora tenha custo. Consulte o valor no cartório de notas da sua cidade.</p>
+          </li>
+
+          <li class="passo revelar">
+            <div class="passo-topo">
+              <span class="passo-num" aria-hidden="true"></span>
+              <h3>Boletim de ocorrência</h3>
+            </div>
+            <p>Registre o B.O. presencialmente em uma delegacia ou pela <strong>delegacia online</strong> do seu estado. Leve ou anexe os prints e anote o número do protocolo.</p>
+          </li>
+
+          <li class="passo largo revelar">
+            <div class="passo-topo">
+              <span class="passo-num" aria-hidden="true"></span>
+              <h3>Relato ao Ministério Público</h3>
+            </div>
+            <p>O relato pode ser protocolado na promotoria da sua cidade ou pelo site da ouvidoria do Ministério Público do seu estado. Use o modelo abaixo como ponto de partida e adapte com os fatos do seu caso.</p>
+
+            <details class="modelo">
+              <summary id="modelo-toggle">Ver modelo de relato</summary>
+              <div class="modelo-conteudo">
+<pre id="modelo-texto">À Ouvidoria / Promotoria de Justiça do Ministério Público do Estado de [ESTADO]
+
+Eu, [NOME COMPLETO], [nacionalidade], [estado civil], portador(a) do CPF nº [CPF], residente em [ENDEREÇO], venho relatar os fatos a seguir:
+
+1. Trabalho (ou trabalhei) como [FUNÇÃO] em [TIPO DE EMPRESA / SETOR], desde [DATA DE ADMISSÃO].
+2. Em [DATA], fui [pressionado(a) / ameaçado(a) / demitido(a)] em razão de minha posição política, conforme [descreva brevemente o que aconteceu, quem falou e onde].
+3. Possuo as seguintes provas: [prints de mensagens, e-mails, áudios, ata notarial, boletim de ocorrência nº ___].
+4. As seguintes pessoas presenciaram os fatos: [NOMES E CONTATOS DAS TESTEMUNHAS, se houver].
+
+Diante do exposto, solicito a apuração dos fatos e a adoção das providências cabíveis.
+
+[CIDADE], [DATA].
+
+[ASSINATURA]</pre>
+                <button type="button" class="btn-copiar" id="btn-copiar-modelo">Copiar modelo</button>
+                <span class="sr-only" id="copiar-status" aria-live="polite"></span>
+              </div>
+            </details>
+          </li>
+
+          <li class="passo revelar">
+            <div class="passo-topo">
+              <span class="passo-num" aria-hidden="true"></span>
+              <h3>Denúncia ao MPT</h3>
+              <span class="tag">Pode ser anônima</span>
+            </div>
+            <p>O Ministério Público do Trabalho recebe denúncias de assédio eleitoral e discriminação. A denúncia pode ser anônima e <strong>não é preciso esperar a demissão</strong> para denunciar.</p>
+          </li>
+
+          <li class="passo largo revelar">
+            <div class="passo-topo">
+              <span class="passo-num" aria-hidden="true"></span>
+              <h3>Procure um advogado ou a Defensoria Pública</h3>
+            </div>
+            <p>Um(a) profissional pode avaliar se cabe ação de reintegração e pedido de indenização por dano moral. Quem não pode pagar pode buscar a <strong>Defensoria Pública</strong> ou os <strong>núcleos de prática jurídica</strong> de faculdades de Direito, que oferecem atendimento gratuito.</p>
+            <p><a href="#advogado" class="btn btn-verde" id="passos-cta-advogado">Enviar meu relato</a></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CANAIS OFICIAIS
+         ATENÇÃO: confira e substitua os links (href) abaixo pelos
+         endereços oficiais atualizados antes de publicar o site.
+         ===================================================== -->
+    <section class="canais" id="denuncie" aria-labelledby="titulo-canais">
+      <div class="container">
+        <div class="secao-cabecalho revelar">
+          <span class="eyebrow">Denuncie</span>
+          <h2 class="secao-titulo" id="titulo-canais">Canais oficiais</h2>
+          <p class="secao-sub">Órgãos públicos que recebem denúncias e oferecem orientação. Os links abrem em uma nova aba.</p>
+        </div>
+
+        <div class="grid-canais">
+          <!-- CANAL: MPT -->
+          <article class="canal revelar">
+            <span class="canal-sigla">MPT</span>
+            <h3>Ministério Público do Trabalho</h3>
+            <p>Recebe denúncias de assédio eleitoral e de discriminação no trabalho, inclusive de forma anônima.</p>
+            <p class="canal-info">Denúncia on-line no site oficial ou na procuradoria regional do seu estado.</p>
+            <!-- SUBSTITUIR: link direto para a página de denúncias do MPT -->
+            <a class="canal-link" id="link-mpt" href="https://mpt.mp.br/" target="_blank" rel="noopener noreferrer">
+              Acessar site do MPT <span aria-hidden="true">→</span><span class="sr-only">(abre em nova aba)</span>
+            </a>
+          </article>
+
+          <!-- CANAL: TRT -->
+          <article class="canal revelar">
+            <span class="canal-sigla">TRT</span>
+            <h3>Tribunal Regional do Trabalho</h3>
+            <p>Cada região do país tem seu TRT, com ouvidoria e informações sobre atendimento e processos trabalhistas.</p>
+            <p class="canal-info">Procure o TRT que atende o seu estado.</p>
+            <!-- SUBSTITUIR: link para a lista de TRTs ou para o TRT da região-alvo -->
+            <a class="canal-link" id="link-trt" href="https://www.tst.jus.br/" target="_blank" rel="noopener noreferrer">
+              Encontrar o TRT da sua região <span aria-hidden="true">→</span><span class="sr-only">(abre em nova aba)</span>
+            </a>
+          </article>
+
+          <!-- CANAL: MPE -->
+          <article class="canal revelar">
+            <span class="canal-sigla">MP Eleitoral</span>
+            <h3>Ministério Público Eleitoral</h3>
+            <p>Atua contra crimes eleitorais, como a coação de eleitores para votar ou deixar de votar em alguém.</p>
+            <p class="canal-info">Atendimento pelas procuradorias regionais eleitorais e promotorias eleitorais.</p>
+            <!-- SUBSTITUIR: link oficial do Ministério Público Eleitoral / canal de denúncias -->
+            <a class="canal-link" id="link-mpe" href="https://www.mpf.mp.br/" target="_blank" rel="noopener noreferrer">
+              Acessar canal do MP Eleitoral <span aria-hidden="true">→</span><span class="sr-only">(abre em nova aba)</span>
+            </a>
+          </article>
+
+          <!-- CANAL: TST -->
+          <article class="canal revelar">
+            <span class="canal-sigla">TST</span>
+            <h3>Tribunal Superior do Trabalho</h3>
+            <p>Campanha <strong>“No meu voto mando eu”</strong>, com informações sobre assédio eleitoral no ambiente de trabalho.</p>
+            <p class="canal-info">Material educativo e orientações sobre como agir.</p>
+            <!-- SUBSTITUIR: link direto para a página da campanha "No meu voto mando eu" -->
+            <a class="canal-link" id="link-tst" href="https://www.tst.jus.br/" target="_blank" rel="noopener noreferrer">
+              Conhecer a campanha <span aria-hidden="true">→</span><span class="sr-only">(abre em nova aba)</span>
+            </a>
+          </article>
+
+          <!-- CANAL: Defensoria -->
+          <article class="canal revelar">
+            <span class="canal-sigla">Defensoria</span>
+            <h3>Defensoria Pública</h3>
+            <p>Oferece orientação jurídica e atuação gratuita para quem não pode pagar um(a) advogado(a).</p>
+            <p class="canal-info">Procure a Defensoria Pública do seu estado ou a Defensoria Pública da União.</p>
+            <!-- SUBSTITUIR: link para a Defensoria Pública estadual da região-alvo ou para a DPU -->
+            <a class="canal-link" id="link-defensoria" href="https://www.dpu.def.br/" target="_blank" rel="noopener noreferrer">
+              Acessar Defensoria Pública <span aria-hidden="true">→</span><span class="sr-only">(abre em nova aba)</span>
+            </a>
+          </article>
+
+          <!-- CANAL: Emergência -->
+          <article class="canal revelar">
+            <span class="canal-sigla">190</span>
+            <h3>Polícia Militar</h3>
+            <p>Em caso de ameaça física, violência ou risco imediato à sua segurança.</p>
+            <p class="canal-info">Ligação gratuita, 24 horas, de qualquer telefone.</p>
+            <a class="canal-link" id="link-190" href="tel:190">
+              Ligar 190 <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FALE COM UM ADVOGADO — FORMULÁRIO
+         ===================================================== -->
+    <section class="contato" id="advogado" aria-labelledby="titulo-contato">
+      <div class="container contato-grid">
+        <div class="contato-lado revelar">
+          <span class="eyebrow">Fale com um advogado</span>
+          <h2 class="secao-titulo" id="titulo-contato">Conte o que aconteceu</h2>
+          <p class="secao-sub">Envie um breve relato. Ele será usado para encaminhar seu caso a profissionais ou serviços de orientação jurídica.</p>
+          <ul>
+            <li>Descreva os fatos com datas aproximadas.</li>
+            <li>Informe que tipo de prova você tem (prints, áudios, testemunhas).</li>
+            <li>Não envie documentos pessoais nem senhas por aqui.</li>
+            <li>Se preferir anonimato total, use o canal de denúncia do MPT.</li>
+          </ul>
+        </div>
+
+        <div class="form-card revelar">
+          <!--
+            SUBSTITUIR: defina o "action" do formulário com o endereço real
+            de recebimento (ex.: endpoint do seu servidor ou serviço de formulários).
+            Enquanto FORM_ACTION_CONFIGURADO for false no script, o envio é apenas simulado.
+          -->
+          <form id="form-relato" action="#" method="post" novalidate aria-describedby="form-instrucao">
+            <p id="form-instrucao" class="dica" style="margin-top:0;color:var(--cinza-600);font-size:.9rem">Campos marcados com <span class="obrig" aria-hidden="true">*</span> são obrigatórios.</p>
+
+            <div class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+
+            <div class="campo">
+              <label for="nome">Nome <span class="obrig" aria-hidden="true">*</span></label>
+              <input type="text" id="nome" name="nome" autocomplete="name" required aria-required="true" aria-describedby="erro-nome" maxlength="120">
+              <span class="msg-erro" id="erro-nome">Informe seu nome.</span>
+            </div>
+
+            <div class="campo">
+              <label for="email">E-mail <span class="obrig" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required aria-required="true" aria-describedby="erro-email" maxlength="160">
+              <span class="msg-erro" id="erro-email">Informe um e-mail válido (ex.: nome@exemplo.com).</span>
+            </div>
+
+            <div class="campo">
+              <label for="estado">Estado <span class="obrig" aria-hidden="true">*</span></label>
+              <select id="estado" name="estado" required aria-required="true" aria-describedby="erro-estado">
+                <option value="">Selecione seu estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+              <span class="msg-erro" id="erro-estado">Selecione seu estado.</span>
+            </div>
+
+            <div class="campo">
+              <label for="relato">Breve descrição do caso <span class="obrig" aria-hidden="true">*</span></label>
+              <textarea id="relato" name="relato" required aria-required="true" aria-describedby="relato-dica erro-relato contador-relato" minlength="30" maxlength="2000"></textarea>
+              <span class="dica" id="relato-dica">O que aconteceu, quando e que provas você possui. Evite citar dados sensíveis de terceiros.</span>
+              <div class="contador" id="contador-relato" aria-live="off">0 / 2000</div>
+              <span class="msg-erro" id="erro-relato">Descreva seu caso com pelo menos 30 caracteres.</span>
+            </div>
+
+            <div class="campo">
+              <div class="campo-check">
+                <input type="checkbox" id="consentimento" name="consentimento" required aria-required="true" aria-describedby="erro-consentimento">
+                <label for="consentimento">Autorizo o uso destas informações exclusivamente para análise e encaminhamento do meu caso, conforme a <a href="#politica-privacidade">Política de Privacidade</a>. <span class="obrig" aria-hidden="true">*</span></label>
+              </div>
+              <span class="msg-erro" id="erro-consentimento">É necessário autorizar o uso das informações para enviar.</span>
+            </div>
+
+            <button type="submit" class="btn btn-verde" id="btn-enviar">
+              Enviar relato
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>
+            </button>
+            <p class="form-privacidade">Seus dados são tratados de acordo com a Lei Geral de Proteção de Dados (LGPD).</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================
+       RODAPÉ
+       ===================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-topo">
+        <div>
+          <a href="#direitos" class="logo" aria-label="Direito de Voz — voltar ao início">
+            <span class="logo-icone" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 7a4 4 0 0 0 6 0z"/><path d="M19 7l-3 7a4 4 0 0 0 6 0z"/><path d="M8 21h8"/></svg>
+            </span>
+            <span>Direito de Voz<small>Trabalho sem medo</small></span>
+          </a>
+          <p style="margin-top:14px;font-size:.93rem">Iniciativa informativa e apartidária de orientação a trabalhadores.</p>
+        </div>
+
+        <div>
+          <p class="aviso-legal" role="note">
+            <strong>Aviso legal:</strong> Este site tem caráter informativo e não substitui a consulta com advogado(a). Cada caso deve ser analisado individualmente.
+          </p>
+          <nav aria-label="Links institucionais">
+            <ul>
+              <!-- SUBSTITUIR: apontar para as páginas reais quando forem criadas -->
+              <li><a href="#politica-privacidade" id="politica-privacidade">Política de Privacidade</a></li>
+              <li><a href="#quem-somos" id="quem-somos">Quem somos</a></li>
+              <li><a href="#denuncie">Canais oficiais</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-base">
+        <p style="margin:0">© <span id="ano-atual">2026</span> Direito de Voz. Conteúdo apartidário, sem vínculo com partidos, candidatos ou empresas.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="topo" id="btn-topo" aria-label="Voltar ao topo da página">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* ======================================================
+         CONFIGURAÇÃO DO FORMULÁRIO
+         SUBSTITUIR: quando houver um endpoint real, coloque a URL
+         em FORM_ACTION_URL e mude FORM_ACTION_CONFIGURADO para true.
+         ====================================================== */
+      var FORM_ACTION_CONFIGURADO = false;
+      var FORM_ACTION_URL = 'https://SEU-ENDPOINT-AQUI.exemplo/relatos';
+
+      var prefereMenosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var header = document.getElementById('header');
+      var menuBotao = document.getElementById('menu-botao');
+      var nav = document.getElementById('nav-principal');
+
+      /* ---------- Ano atual no rodapé ---------- */
+      document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
+      /* ---------- Menu mobile ---------- */
+      function fecharMenu() {
+        nav.classList.remove('aberto');
+        menuBotao.setAttribute('aria-expanded', 'false');
+        menuBotao.setAttribute('aria-label', 'Abrir menu de navegação');
+      }
+      menuBotao.addEventListener('click', function () {
+        var aberto = nav.classList.toggle('aberto');
+        menuBotao.setAttribute('aria-expanded', String(aberto));
+        menuBotao.setAttribute('aria-label', aberto ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+        if (aberto) { var primeiro = nav.querySelector('a'); if (primeiro) primeiro.focus(); }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('aberto')) { fecharMenu(); menuBotao.focus(); }
+      });
+
+      /* ---------- (a) Rolagem suave entre seções ---------- */
+      function rolarPara(alvo) {
+        var offset = header.offsetHeight + 8;
+        var y = alvo.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: alvo.id === 'direitos' ? 0 : y, behavior: prefereMenosMovimento ? 'auto' : 'smooth' });
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var id = link.getAttribute('href').slice(1);
+          if (!id) return;
+          var alvo = document.getElementById(id);
+          // Links que ainda não têm seção (ex.: Política de Privacidade) ficam sem ação
+          if (!alvo || alvo.tagName === 'A') { e.preventDefault(); return; }
+          e.preventDefault();
+          rolarPara(alvo);
+          fecharMenu();
+          history.replaceState(null, '', '#' + id);
+          // Move o foco para a seção (acessibilidade para teclado e leitores de tela)
+          if (!alvo.hasAttribute('tabindex')) alvo.setAttribute('tabindex', '-1');
+          alvo.focus({ preventScroll: true });
+        });
+      });
+
+      /* ---------- Cabeçalho com sombra + botão topo + menu ativo ---------- */
+      var btnTopo = document.getElementById('btn-topo');
+      var secoesMenu = ['direitos', 'passo-a-passo', 'denuncie', 'advogado'].map(function (id) {
+        return document.getElementById(id);
+      });
+      var linksMenu = nav.querySelectorAll('a');
+
+      function aoRolar() {
+        var y = window.pageYOffset;
+        header.classList.toggle('rolado', y > 10);
+        btnTopo.classList.toggle('visivel', y > 600);
+
+        var atual = secoesMenu[0].id;
+        secoesMenu.forEach(function (s) {
+          if (s.getBoundingClientRect().top - header.offsetHeight - 80 <= 0) atual = s.id;
+        });
+        linksMenu.forEach(function (a) {
+          var ativo = a.getAttribute('href') === '#' + atual;
+          a.classList.toggle('ativo', ativo);
+          if (ativo) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+        });
+      }
+      window.addEventListener('scroll', aoRolar, { passive: true });
+      aoRolar();
+
+      btnTopo.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: prefereMenosMovimento ? 'auto' : 'smooth' });
+        document.getElementById('conteudo').focus({ preventScroll: true });
+      });
+
+      /* ---------- Animação de entrada ---------- */
+      var revelaveis = document.querySelectorAll('.revelar');
+      if ('IntersectionObserver' in window && !prefereMenosMovimento) {
+        var obs = new IntersectionObserver(function (entradas) {
+          entradas.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('visivel'); obs.unobserve(en.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revelaveis.forEach(function (el) { obs.observe(el); });
+      } else {
+        revelaveis.forEach(function (el) { el.classList.add('visivel'); });
+      }
+
+      /* ---------- Copiar modelo de relato ---------- */
+      var btnCopiar = document.getElementById('btn-copiar-modelo');
+      var copiarStatus = document.getElementById('copiar-status');
+      btnCopiar.addEventListener('click', function () {
+        var texto = document.getElementById('modelo-texto').textContent;
+        function sucesso() {
+          btnCopiar.textContent = 'Modelo copiado ✓';
+          copiarStatus.textContent = 'Modelo copiado para a área de transferência.';
+          setTimeout(function () { btnCopiar.textContent = 'Copiar modelo'; copiarStatus.textContent = ''; }, 2500);
+        }
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(texto).then(sucesso, fallback);
+        } else { fallback(); }
+        function fallback() {
+          var ta = document.createElement('textarea');
+          ta.value = texto; ta.setAttribute('readonly', ''); ta.style.position = 'absolute'; ta.style.left = '-9999px';
+          document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy'); sucesso(); } catch (err) { copiarStatus.textContent = 'Não foi possível copiar. Selecione o texto manualmente.'; }
+          document.body.removeChild(ta);
+        }
+      });
+
+      /* ---------- (b) Validação do formulário ---------- */
+      var form = document.getElementById('form-relato');
+      var status = document.getElementById('form-status');
+      var relato = document.getElementById('relato');
+      var contador = document.getElementById('contador-relato');
+      var REGEX_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+      relato.addEventListener('input', function () {
+        contador.textContent = relato.value.length + ' / 2000';
+      });
+
+      var regras = {
+        nome: function (el) { return el.value.trim().length >= 2; },
+        email: function (el) { return REGEX_EMAIL.test(el.value.trim()); },
+        estado: function (el) { return el.value !== ''; },
+        relato: function (el) { return el.value.trim().length >= 30; },
+        consentimento: function (el) { return el.checked; }
+      };
+
+      function validarCampo(id) {
+        var el = document.getElementById(id);
+        var valido = regras[id](el);
+        var wrapper = el.closest('.campo');
+        wrapper.classList.toggle('erro', !valido);
+        el.setAttribute('aria-invalid', String(!valido));
+        return valido;
+      }
+
+      // Revalida em tempo real somente depois que o campo já apresentou erro
+      Object.keys(regras).forEach(function (id) {
+        var el = document.getElementById(id);
+        var evento = (el.type === 'checkbox' || el.tagName === 'SELECT') ? 'change' : 'input';
+        el.addEventListener(evento, function () {
+          if (el.closest('.campo').classList.contains('erro')) validarCampo(id);
+        });
+      });
+
+      function mostrarStatus(tipo, msg) {
+        status.className = 'form-status ' + tipo;
+        status.textContent = msg;
+        status.focus();
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        status.className = 'form-status';
+        status.textContent = '';
+
+        var invalidos = Object.keys(regras).filter(function (id) { return !validarCampo(id); });
+        if (invalidos.length) {
+          mostrarStatus('falha', 'Revise ' + (invalidos.length === 1 ? 'o campo destacado' : 'os ' + invalidos.length + ' campos destacados') + ' antes de enviar.');
+          document.getElementById(invalidos[0]).focus();
+          return;
+        }
+
+        var btn = document.getElementById('btn-enviar');
+        btn.disabled = true;
+        btn.setAttribute('aria-busy', 'true');
+
+        if (FORM_ACTION_CONFIGURADO) {
+          // Envio real (ativado quando o endpoint estiver configurado)
+          fetch(FORM_ACTION_URL, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+            .then(function (r) {
+              if (!r.ok) throw new Error('HTTP ' + r.status);
+              form.reset(); contador.textContent = '0 / 2000';
+              mostrarStatus('sucesso', 'Relato enviado com sucesso. Obrigado pela confiança. Entraremos em contato pelo e-mail informado.');
+            })
+            .catch(function () {
+              mostrarStatus('falha', 'Não foi possível enviar agora. Tente novamente em alguns minutos ou procure diretamente os canais oficiais.');
+            })
+            .finally(function () { btn.disabled = false; btn.removeAttribute('aria-busy'); });
+        } else {
+          // Versão 1: envio apenas simulado (front-end)
+          setTimeout(function () {
+            form.reset(); contador.textContent = '0 / 2000';
+            Object.keys(regras).forEach(function (id) { document.getElementById(id).removeAttribute('aria-invalid'); });
+            mostrarStatus('sucesso', 'Relato registrado (demonstração). Nesta versão, o formulário ainda não envia dados — configure o endereço de envio no código.');
+            btn.disabled = false; btn.removeAttribute('aria-busy');
+          }, 600);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
